@@ -1,0 +1,173 @@
+// @use 'sass:math';
+
+// $utilities: (
+//     'margin': (
+//         'prefix': 'm',
+//         'values': (
+//             '1': $base-margin,
+//             '2': $base-margin * 2,
+//             '3': $base-margin * 3,
+//             '4': $base-margin * 4,
+//             '5': $base-margin * 5,
+//         )
+//     ),
+//     'margin-left': (
+//         'prefix': 'ml',
+//         'values': (
+//             '1': $base-margin,
+//             '2': $base-margin * 2,
+//             '3': $base-margin * 3,
+//             '4': $base-margin * 4,
+//             '5': $base-margin * 5,
+//         )
+//     ),
+//     'margin-right': (
+//         'prefix': 'mr',
+//         'values': (
+//             '1': $base-margin,
+//             '2': $base-margin * 2,
+//             '3': $base-margin * 3,
+//             '4': $base-margin * 4,
+//             '5': $base-margin * 5,
+//         )
+//     ),
+//     'margin-top': (
+//         'prefix': 'mt',
+//         'values': (
+//             '1': $base-margin,
+//             '2': $base-margin * 2,
+//             '3': $base-margin * 3,
+//             '4': $base-margin * 4,
+//             '5': $base-margin * 5,
+//         )
+//     ),
+//     'margin-bottom': (
+//         'prefix': 'mb',
+//         'values': (
+//             '1': $base-margin,
+//             '2': $base-margin * 2,
+//             '3': $base-margin * 3,
+//             '4': $base-margin * 4,
+//             '5': $base-margin * 5,
+//         )
+//     ),
+//     'font-size': (
+//         'prefix': 'font',
+//         'values': (
+//             'sm': $font-size-sm,
+//             'md': $base-font-size,
+//             'lg': $font-size-lg,
+//             'xl': $font-size-xl,
+//             'xxl': $font-size-xxl
+//         )
+//     ),
+//     'padding': (
+//         'prefix': 'p',
+//         'values': (
+//             '1': $base-padding,
+//             '2': $base-padding * 2,
+//             '3': $base-padding * 3,
+//             '4': $base-padding * 4,
+//             '5': $base-padding * 5,
+//         )
+//     ),
+//     'padding-left': (
+//         'prefix': 'pl',
+//         'values': (
+//             '1': $base-padding,
+//             '2': $base-padding * 2,
+//             '3': $base-padding * 3,
+//             '4': $base-padding * 4,
+//             '5': $base-padding * 5,
+//         )
+//     ),
+//     'padding-right': (
+//         'prefix': 'pr',
+//         'values': (
+//             '1': $base-padding,
+//             '2': $base-padding * 2,
+//             '3': $base-padding * 3,
+//             '4': $base-padding * 4,
+//             '5': $base-padding * 5,
+//         )
+//     ),
+//     'padding-top': (
+//         'prefix': 'pt',
+//         'values': (
+//             '1': $base-padding,
+//             '2': $base-padding * 2,
+//             '3': $base-padding * 3,
+//             '4': $base-padding * 4,
+//             '5': $base-padding * 5,
+//         )
+//     ),
+//     'padding-bottom': (
+//         'prefix': 'pb',
+//         'values': (
+//             '1': $base-padding,
+//             '2': $base-padding * 2,
+//             '3': $base-padding * 3,
+//             '4': $base-padding * 4,
+//             '5': $base-padding * 5,
+//         )
+//     )
+// );
+
+// @each $property, $map in $utilities {
+//     $prefix: map-get($map, 'prefix');
+//     $values: map-get($map, 'values');
+
+//     @each $key, $val in $values {
+//         .#{$prefix}-#{$key} {
+//             #{$property}: $val;
+//         }
+//     }
+// }
+
+@for $i from 1 through 50 {
+    @if ($i % 2 == 0) {
+        .fs-#{$i} {
+            font-size:  1px * $i;
+        }   
+
+        .m-#{$i} {
+            margin: 1px * $i;
+        }
+        .mt-#{$i} {
+            margin-top: 1px * $i;
+        }
+        .mb-#{$i} {
+            margin-bottom: 1px * $i;
+        }
+        .ml-#{$i} {
+            margin-left: 1px * $i;
+        }
+        .mr-#{$i} {
+            margin-right: 1px * $i;
+        }
+
+        .p-#{$i} {
+            padding: 1px * $i;
+        }
+        .pt-#{$i} {
+            padding-top: 1px * $i;
+        }
+        .pb-#{$i} {
+            padding-bottom: 1px * $i;
+        }
+        .pl-#{$i} {
+            padding-left: 1px * $i;
+        }
+        .pr-#{$i} {
+            padding-right: 1px * $i;
+        }
+    }
+}
+
+.fw-500 {
+    font-weight: 500;
+}
+
+.font-italic {
+    font-style: italic;
+}
